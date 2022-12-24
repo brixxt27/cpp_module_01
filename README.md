@@ -1,5 +1,5 @@
 # Home
-### 이슈 관리: [전체 이슈 list]()
+### 이슈 관리: [전체 이슈 list](https://github.com/brixxt27/cpp_module_01/issues/1)
 
 # ex00: BraiiiiiiinnnzzzZ
 ## Usage
