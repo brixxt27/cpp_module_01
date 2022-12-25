@@ -6,7 +6,7 @@ Zombie::Zombie(std::string name) {
 }
 
 Zombie::~Zombie() {
-	std::cout << *_name << ": Growl....." << std::endl;
+	std::cout << *_name << ": Growl..." << std::endl;
 	delete _name;
 }
 
