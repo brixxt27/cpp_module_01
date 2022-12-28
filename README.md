@@ -78,7 +78,7 @@ Forbidden functions : None
     - private string type 변수
     - getType() const reference to type 을 반환하는 멤버 함수
     - setType(std::string type) 은 매개변수로 받은 것을 type 으로 세팅한다. 
-  - 이제 HumanA, HumanB 클래스를 만들어라. 둘 다 Weapon 과 name 을 가지고 있다. " <name> attacks with their <weapon name> " 을 출력하는 attack() 이라는 멤버 함수도 있다.
+  - 이제 HumanA, HumanB 클래스를 만들어라. 둘 다 Weapon 과 name 을 가지고 있다. " (name) attacks with their (weapon name) " 을 출력하는 attack() 이라는 멤버 함수도 있다.
   - HumanA, HumanB 는 사소한 차이를 제외하고 거의 같다.
     - HumanA가 생성자 매개변수로 Weapon 을 가지고 있는 반면에 HumanB 는 가지지 않았다.
     - HumanB 는 항상 무기를 가지고 있지 않을지도 모르지만, HumanA는 항상 무장한다.
