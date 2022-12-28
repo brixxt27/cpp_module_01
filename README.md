@@ -80,9 +80,9 @@ Forbidden functions : None
     - setType(std::string type) 은 매개변수로 받은 것을 type 으로 세팅한다. 
   - 이제 HumanA, HumanB 클래스를 만들어라. 둘 다 Weapon 과 name 을 가지고 있다. " <name> attacks with their <weapon name> " 을 출력하는 attack() 이라는 멤버 함수도 있다.
   - HumanA, HumanB 는 사소한 차이를 제외하고 거의 같다.
-    - HumanA가 생성자에서 Weapon 을 가지고 있는 동안에 HumanB 는 가질 수 없다.
+    - HumanA가 생성자 매개변수로 Weapon 을 가지고 있는 반면에 HumanB 는 가지지 않았다.
     - HumanB 는 항상 무기를 가지고 있지 않을지도 모르지만, HumanA는 항상 무장한다.
-  - 만약 이를 제대로 구현했다면, 다음에 오는 코드를 실행했을 때 두 test 모두 attack() 으로 "crude spiked club" 를 출력하고, 다음 "some other type of club" 을 출력할 것이다. then a second attack with "some other type of club" for both test cases
+  - 만약 이를 제대로 구현했다면, 다음에 오는 코드를 실행했을 때 두 test 모두 attack() 으로 "crude spiked club" 를 출력하고, 다음 "some other type of club" 을 출력할 것이다.
 ```
 int main()
 {
