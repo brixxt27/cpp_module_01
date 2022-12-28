@@ -7,7 +7,7 @@ int main(void) {
 	a.setName("StackZom");
 	a.announce();
 
-	Zombie*     b = a.zombieHorde(num_zom, "HeapZoms");
+	Zombie*     b = zombieHorde(num_zom, "HeapZoms");
 
 	for (int i = 0; i < num_zom; i++) {
 		b[i].announce();
