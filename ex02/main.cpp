@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 
-static void test_parameter_in_function(std::string stringORG, std::string* stringPTR, std::string& stringREF) {
+static void test_reference_of_parameter(std::string stringORG, std::string* stringPTR, std::string& stringREF) {
 	std::string		msg_add_stringORG	= "Address of stringORG: ";
 	std::string		msg_add_stringPTR	= "Address of stringPTR: ";
 	std::string		msg_add_stringREF	= "Address of stringREF: ";
@@ -12,7 +12,7 @@ static void test_parameter_in_function(std::string stringORG, std::string* strin
 
 	size_t			len_most_long_str = msg_add_stringORG.size();
 
-	std::cout << "\n** test_parameter_in_function **\n" << std::endl;
+	std::cout << "\n** This is output of test_reference_of_parameter function! **\n" << std::endl;
 
 	std::cout << std::setw(len_most_long_str) << std::left << msg_add_stringORG << &stringORG << std::endl;
 	std::cout << std::setw(len_most_long_str) << std::left << msg_add_stringPTR << &stringPTR << std::endl;
@@ -46,6 +46,6 @@ int	main(void) {
 	std::cout << std::setw(len_most_long_str) << std::left << msg_val_stringPTR << stringPTR << std::endl;
 	std::cout << std::setw(len_most_long_str) << std::left << msg_val_stringREF << stringREF << std::endl;
 
-	test_parameter_in_function(stringORG, stringPTR, stringREF);
+	test_reference_of_parameter(stringORG, stringPTR, stringREF);
 	return 0;                                                                
 }
