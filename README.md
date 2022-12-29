@@ -134,17 +134,14 @@ Files to turn in : Makefile, main.cpp, Harl.{h, hpp}, Harl.cpp
 Forbidden functions : None
   ```
 ## Detail
-  - Harl class 의 private 멤버 함수 로 다음을 구현해라. • void debug( void );
-• void info( void );
-• void warning( void );
-• void error( void );
+  - Harl class 의 private 멤버 함수 로 다음을 구현해라. 
+    - void debug( void );
+    - void info( void );
+    - void warning( void );
+    - void error( void );
   - Harl 은 public 멤버 함수로 파라미터를 통해 들어오는 레벨에 따라 네 개의 멤버 함수를 호출하는 함수를 가지고 있다.
   void complain( std::string level );
-  - The goal of this exercise is to use pointers to member functions. This is not a
-suggestion. Harl has to complain without using a forest of if/else if/else. It doesn’t think
-twice!
-Create and turn in tests to show that Harl complains a lot. You can use the example
-comments.
+  - 이 문제의 목표는 멤버 함수를 가리키는 함수 포인터를 사용하는 것이다. 이것은 제안이 아니다. Harl 은 if/else if/else 의 복잡한 구조를 사용하지 않고 불평해야 한다. 두 번 생각하지 마라! 프로그램을 만들고, Harl이 많은 불평을 하는 것을 보여줄 수 있는 테스트를 추가해둬라. 예제에 대한 주석을 사용할 수 있다.
   
 # Exercise 06: Harl filter
 ## Usage
