@@ -1,0 +1,10 @@
+apple
+ jayoon
+ banana
+ kiwi
+ jayoon
+ monkey
+ watermelon
+ tomato
+ melon
+ jayoon

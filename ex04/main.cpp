@@ -1,7 +1,6 @@
 #include <fstream>
 #include "sed_is_for_losers.hpp"
 #include <iostream>
-#include <iostream>
 
 static const char*	GetNewFileName(char* filename) {
 	std::string	filetype = ".replace";
@@ -45,20 +44,15 @@ int main(int argc, char* argv[]) {
 		return EXIT_FAILURE;
 	}
 
+	std::getline(fin, buffer, (char)std::ifstream::traits_type::eof());
 	while (true) {
-		if (fin.eof() == true)
+		pos = buffer.find(s1);
+		if (pos == std::string::npos)
 			break;
-		getline(fin, buffer);
-		while (true) {
-			pos = buffer.find(s1);
-			if (pos == std::string::npos)
-				break;
-			buffer.erase(pos, s1.size());
-			buffer.insert(pos, s2);
-		}
-		fout << '\n';
-		fout << buffer;
+		buffer.erase(pos, s1.size());
+		buffer.insert(pos, s2);
 	}
+	fout << buffer;
 
 	fin.close();
 	fout.close();
