@@ -6,26 +6,17 @@
 static const char*	GetNewFileName(char* filename) {
 	std::string	filetype = ".replace";
 	std::string	string_filename;
-	const char*		ret;
+	const char*	ret;
 	char*		dest;
 
 	string_filename = filename + filetype;
-
 	ret = string_filename.c_str();
-
 	dest = new char[strlen(ret) + 1];
-
 	std::memcpy(dest, ret, std::strlen(ret) + 1);
-
-
-	// debug
-	//std::cout << "file: " << ret << std::endl;
-	std::cout << "file: " << dest << std::endl;
-
 	return dest;
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
 	if (argc != 4) {
 		std::cout << MSG_ERR_ARGC << std::endl;
 		return EXIT_FAILURE;
@@ -37,6 +28,8 @@ int main(int argc, char *argv[]) {
 	std::ifstream		fin;
 	std::ofstream		fout;
 	std::string			buffer;
+	size_t				pos;
+
 
 	fin.open(filename, std::ifstream::in);
 	if (fin.is_open() == false) {
@@ -45,11 +38,6 @@ int main(int argc, char *argv[]) {
 	}
 
 	const char*			new_filename = GetNewFileName(filename);
-
-	//debug
-	std::cout << "file: " << new_filename << std::endl;
-
-
 
 	fout.open(new_filename, std::ofstream::out);
 	if (fout.is_open() == false) {
@@ -61,6 +49,14 @@ int main(int argc, char *argv[]) {
 		if (fin.eof() == true)
 			break;
 		getline(fin, buffer);
+		while (true) {
+			pos = buffer.find(s1);
+			if (pos == std::string::npos)
+				break;
+			buffer.erase(pos, s1.size());
+			buffer.insert(pos, s2);
+		}
+		fout << '\n';
 		fout << buffer;
 	}
 
