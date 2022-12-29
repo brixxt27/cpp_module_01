@@ -65,5 +65,6 @@ int main(int argc, char* argv[]) {
 
 	delete[] new_filename;
 
+	//system("leaks sed_is_for_losers");
 	return EXIT_SUCCESS;
 }
