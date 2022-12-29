@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	std::getline(fin, buffer, (char)std::ifstream::traits_type::eof());
+	std::getline(fin, buffer, static_cast<char>(std::ifstream::traits_type::eof()));
 	while (true) {
 		pos = buffer.find(s1);
 		if (pos == std::string::npos)
@@ -59,6 +59,5 @@ int main(int argc, char* argv[]) {
 
 	delete[] new_filename;
 
-	//system("leaks sed_is_for_losers");
 	return EXIT_SUCCESS;
 }
