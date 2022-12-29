@@ -7,15 +7,22 @@ static const char*	GetNewFileName(char* filename) {
 	std::string	filetype = ".replace";
 	std::string	string_filename;
 	const char*		ret;
+	char*		dest;
 
 	string_filename = filename + filetype;
 
 	ret = string_filename.c_str();
 
-	// debug
-	std::cout << "file: " << ret << std::endl;
+	dest = new char[strlen(ret) + 1];
 
-	return ret;
+	std::memcpy(dest, ret, std::strlen(ret) + 1);
+
+
+	// debug
+	//std::cout << "file: " << ret << std::endl;
+	std::cout << "file: " << dest << std::endl;
+
+	return dest;
 }
 
 int main(int argc, char *argv[]) {
@@ -44,20 +51,23 @@ int main(int argc, char *argv[]) {
 
 
 
-	//fout.open(new_filename, std::ofstream::out);
-	//if (fout.is_open() == false) {
-	//	std::cout << MSG_ERR_FILE_SAVE_FAIL << std::endl;
-	//	return EXIT_FAILURE;
-	//}
+	fout.open(new_filename, std::ofstream::out);
+	if (fout.is_open() == false) {
+		std::cout << MSG_ERR_FILE_SAVE_FAIL << std::endl;
+		return EXIT_FAILURE;
+	}
 
-	//while (true) {
-	//	if (fin.eof() == true)
-	//		break;
-	//	getline(fin, buffer);
-	//	fout << buffer;
-	//}
+	while (true) {
+		if (fin.eof() == true)
+			break;
+		getline(fin, buffer);
+		fout << buffer;
+	}
 
 	fin.close();
 	fout.close();
+
+	delete[] new_filename;
+
 	return EXIT_SUCCESS;
 }
