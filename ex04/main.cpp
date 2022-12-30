@@ -14,13 +14,19 @@ int main(int argc, char* argv[]) {
 	char*				filename;
 	std::string			s1;
 	std::string			s2;
+	std::string			empty_line = "";
 	std::ifstream		fin;
 	std::ofstream		fout;
 	std::string			buffer;
-	size_t				pos;
+	size_t				pos = 0;
 
 	if (argc != 4) {
 		std::cout << MSG_ERR_ARGC << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	if (argv[2] == empty_line) {
+		std::cout << MSG_ERR_S1_EMPTY << std::endl;
 		return EXIT_FAILURE;
 	}
 
@@ -42,11 +48,12 @@ int main(int argc, char* argv[]) {
 
 	std::getline(fin, buffer, static_cast<char>(std::ifstream::traits_type::eof()));
 	while (true) {
-		pos = buffer.find(s1);
+		pos = buffer.find(s1, pos);
 		if (pos == std::string::npos)
 			break;
 		buffer.erase(pos, s1.size());
 		buffer.insert(pos, s2);
+		pos += s2.size();
 	}
 	fout << buffer;
 
