@@ -1,5 +1,37 @@
 #include "Harl.hpp"
 
+void	Harl::complain(std::string level) {
+	int					idx_fp = 0;
+	const std::string	arr_level[5] = {
+		"INSIGNIFICANT", 
+		"DEBUG",
+		"INFO",
+		"WARNING", 
+		"ERROR"
+	};
+
+	for (int i = 1; i < NUM_LEVEL; i++) {
+		if (arr_level[i] == level) {
+			idx_fp = i;
+			break;
+		}
+	}
+
+	switch (idx_fp) {
+		case INSIGNIFICANT:
+			insignificant();
+			break;
+		case DEBUG:
+			debug();
+		case INFO:
+			info();
+		case WARNING:
+			warning();
+		case ERROR:
+			error();
+	}
+}
+
 void	Harl::insignificant(void) {
 	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 }

@@ -3,23 +3,26 @@
 
 #include <iostream>
 
-#define NUM_LEVEL 4
+#define NUM_LEVEL 5
 
 class Harl {
 public:
-	void	insignificant(void);
-	void	debug(void);
-	void	info(void);
-	void	warning(void);
-	void	error(void);
+	void	complain(std::string level);
 
+private:
 	enum e_level {
-		INSIGNIFICANT = -1,
+		INSIGNIFICANT = 0,
 		DEBUG,
 		INFO,
 		WARNING,
 		ERROR
 	};
+
+	void	insignificant(void);
+	void	debug(void);
+	void	info(void);
+	void	warning(void);
+	void	error(void);
 };
 
 #endif
