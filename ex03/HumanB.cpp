@@ -6,6 +6,10 @@ HumanB::HumanB(std::string name)
 {}
 
 void	HumanB::attack() const {
+	if (_weapon == NULL) {
+		std::cout << "Weapon is not exist" << std::endl;
+		return;
+	}
 	std::cout << _name << ": attacks with their " << _weapon->getType() << std::endl;
 }
 
