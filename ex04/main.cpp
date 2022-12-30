@@ -2,22 +2,16 @@
 #include "sed_is_for_losers.hpp"
 #include <iostream>
 
-static const char*	GetNewFileName(char* filename) {
+static std::string	GetNewFileName(char* filename) {
 	std::string	filetype = ".replace";
 	std::string	string_filename;
-	const char*	ret;
-	char*		dest;
 
 	string_filename = filename + filetype;
-	ret = string_filename.c_str();
-	dest = new char[strlen(ret) + 1];
-	std::memcpy(dest, ret, std::strlen(ret) + 1);
-	return dest;
+	return string_filename;
 }
 
 int main(int argc, char* argv[]) {
 	char*				filename;
-	const char*			new_filename;
 	std::string			s1;
 	std::string			s2;
 	std::ifstream		fin;
@@ -40,9 +34,7 @@ int main(int argc, char* argv[]) {
 		return EXIT_FAILURE;
 	}
 	
-	new_filename = GetNewFileName(filename);
-
-	fout.open(new_filename, std::ofstream::out);
+	fout.open(GetNewFileName(filename).c_str(), std::ofstream::out);
 	if (fout.is_open() == false) {
 		std::cout << MSG_ERR_FILE_SAVE_FAIL << std::endl;
 		return EXIT_FAILURE;
@@ -60,8 +52,6 @@ int main(int argc, char* argv[]) {
 
 	fin.close();
 	fout.close();
-
-	delete[] new_filename;
 
 	return EXIT_SUCCESS;
 }
