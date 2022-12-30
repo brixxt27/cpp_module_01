@@ -16,19 +16,22 @@ static const char*	GetNewFileName(char* filename) {
 }
 
 int main(int argc, char* argv[]) {
+	char*			filename;
+	std::string		s1;
+	std::string		s2;
+	std::ifstream	fin;
+	std::ofstream	fout;
+	std::string		buffer;
+	size_t			pos;
+
 	if (argc != 4) {
 		std::cout << MSG_ERR_ARGC << std::endl;
 		return EXIT_FAILURE;
 	}
 
-	char*				filename = argv[1];
-	std::string			s1 = argv[2];
-	std::string			s2 = argv[3];
-	std::ifstream		fin;
-	std::ofstream		fout;
-	std::string			buffer;
-	size_t				pos;
-
+	filename = argv[1];
+	s1 = argv[2];
+	s2 = argv[3];
 
 	fin.open(filename, std::ifstream::in);
 	if (fin.is_open() == false) {
