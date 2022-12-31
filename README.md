@@ -4,12 +4,10 @@
 # Exercise 00: BraiiiiiiinnnzzzZ
 ## Usage
 ```
-```
 git clone https://github.com/brixxt27/cpp_module_01.git
 cd cpp_module_01/ex00
 make
 ./BraiiiiiiinnnzzzZ
-```
 ```
 ## Summary
 ```
