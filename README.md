@@ -5,6 +5,12 @@
 ## Usage
 ```
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex00
+make
+./BraiiiiiiinnnzzzZ
+```
+```
 ## Summary
 ```
 Turn-in directory : ex00/
@@ -24,6 +30,10 @@ Forbidden functions : None
 # Exercise 01: Moar brainz!
 ## Usage
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex01
+make
+./moar_brainz
 ```
 ## Summary
 ```
@@ -41,6 +51,10 @@ Forbidden functions : None
 # Exercise 02: HI THIS IS BRAIN
 ## Usage
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex02
+make
+./hi_this_is_brain
 ```
 ## Summary
   ```
@@ -65,6 +79,10 @@ Forbidden functions : None
 # Exercise 03: Unnecessary violence
 ## Usage
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex03
+make
+./unnecessary_violence
 ```
 ## Summary
 ```
@@ -109,6 +127,10 @@ int main()
 # Exercise 04: Sed is for losers
 ## Usage
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex04
+make
+./sed_is_for_losers test.txt a b
 ```
 ## Summary
   ```
@@ -126,6 +148,10 @@ Forbidden functions : std::string::replace
 # Exercise 05: Harl 2.0
 ## Usage
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex05
+make
+./Harl_2
 ```
 ## Summary
   ```
@@ -146,6 +172,10 @@ Forbidden functions : None
 # Exercise 06: Harl filter
 ## Usage
 ```
+git clone https://github.com/brixxt27/cpp_module_01.git
+cd cpp_module_01/ex06
+make
+./harlFilter
 ```
 ## Summary
 ```
